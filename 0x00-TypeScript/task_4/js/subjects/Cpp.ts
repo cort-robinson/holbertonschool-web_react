@@ -12,7 +12,7 @@ namespace Subjects {
             if (this.teacher.experienceTeachingC > 0) {
                 return `Available Teacher: ${this.teacher.firstName}`;
             }
-            return 'No teacher available';
+            return 'No available teacher';
         }
     }
 }
