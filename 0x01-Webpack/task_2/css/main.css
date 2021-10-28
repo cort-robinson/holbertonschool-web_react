@@ -1,0 +1,10 @@
+#count {
+    font-weight: bold;
+    display: inline;
+}
+
+#logo {
+    width: 200;
+    height: 200;
+    background: url('../assets/favicon.ico') center 200;
+}
