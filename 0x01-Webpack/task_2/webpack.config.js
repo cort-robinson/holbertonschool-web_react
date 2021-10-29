@@ -6,7 +6,7 @@ const config = {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js'
   },
-  mode: "production",
+  mode: 'production',
   module: {
     rules: [
       {
@@ -18,8 +18,8 @@ const config = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/,
-        type: 'asset/resource',
-      },
+        type: 'asset/resource'
+      }
     ]
   }
 };
