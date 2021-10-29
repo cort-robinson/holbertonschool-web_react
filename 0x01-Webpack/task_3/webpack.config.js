@@ -23,6 +23,12 @@ const config = {
     filename: '[name].bundle.js'
   },
   mode: 'development',
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: path.join(__dirname, './public'),
+    port: 8564,
+    liveReload: true,
+  },
   module: {
     rules: [
       {
