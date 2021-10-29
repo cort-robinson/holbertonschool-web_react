@@ -1,9 +1,9 @@
-import { resolve } from 'path';
+const path = require('path');
 
 const config = {
   entry: './js/dashboard_main.js',
   output: {
-    path: resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js'
   },
   mode: 'production',
@@ -24,4 +24,4 @@ const config = {
   }
 };
 
-export default config;
+module.exports = config;
