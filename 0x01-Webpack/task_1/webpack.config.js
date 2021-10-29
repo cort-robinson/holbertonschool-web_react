@@ -6,7 +6,7 @@ const config = {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js'
   },
-  mode: "production"
+  mode: 'production'
 };
 
 module.exports = config;
