@@ -1,0 +1,8 @@
+:root {
+  --color-primary: #E0354B;
+}
+
+.Notifications {
+  padding: 1em;
+  border: 0.1em dashed var(--color-primary);
+}
