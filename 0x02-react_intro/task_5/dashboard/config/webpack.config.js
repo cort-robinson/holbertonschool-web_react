@@ -7,8 +7,9 @@ const config = {
     filename: 'bundle.js',
   },
   devServer: {
-    contentBase: path.join(__dirname, './dist'),
-    open: true
+    contentBase: path.join(__dirname, '../dist'),
+    open: true,
+    hot: true,
   },
   devtool: 'inline-source-map',
   module: {
