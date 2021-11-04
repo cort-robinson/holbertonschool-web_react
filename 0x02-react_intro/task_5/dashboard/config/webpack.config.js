@@ -1,22 +1,22 @@
 const path = require('path');
 
 const config = {
-  entry: '../src/index.js',
+  entry: path.join(__dirname, '../src', 'index.js'),
   output: {
-    path: path.resolve(__dirname, '../dist'),
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, '../public'),
+    filename: 'bundle.js'
   },
   devServer: {
-    contentBase: path.join(__dirname, '../dist'),
+    static: path.join(__dirname, '../dist'),
     open: true,
-    hot: true,
+    hot: true
   },
   devtool: 'inline-source-map',
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
@@ -26,13 +26,33 @@ const config = {
             loader: 'image-webpack-loader',
             options: {
               bypassOnDebug: true, // webpack@1.x
-              disable: true, // webpack@2.x and newer
-            },
-          },
-        ],
+              disable: true // webpack@2.x and newer
+            }
+          }
+        ]
+      },
+      {
+        test: /\.?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react']
+          }
+        }
+      },
+      {
+        test: /\.?jsx$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react']
+          }
+        }
       }
-    ],
-  },
+    ]
+  }
 };
 
 module.exports = config;
