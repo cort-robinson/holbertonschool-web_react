@@ -15,8 +15,8 @@
   },
   "scripts": {
     "test": "jest",
-    "dev": "webpack serve --mode development -c ./config/webpack.config.js --open",
-    "build": "webpack --mode production -c ./config/webpack.config.js"
+    "build": "webpack --mode production --config config/webpack.config.js",
+    "start": "webpack-dev-server --mode development --config config/webpack.config.js"
   },
   "keywords": [],
   "author": "Cort Robinson",
@@ -28,6 +28,7 @@
     "@hot-loader/react-dom": "^17.0.1",
     "@types/react": "^17.0.34",
     "@types/react-dom": "^17.0.11",
+    "babel-jest": "^27.3.1",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
     "enzyme": "^3.11.0",
@@ -40,5 +41,12 @@
     "webpack": "^5.61.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.4.0"
+  },
+  "jest": {
+    "setupFilesAfterEnv": ["<rootDir>/config/setupTests.js"],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
+    }
   }
 }
