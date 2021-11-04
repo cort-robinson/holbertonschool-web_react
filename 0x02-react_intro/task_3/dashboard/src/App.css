@@ -1,0 +1,43 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+:root {
+  --color-primary: #E0354B;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  color: var(--color-primary);
+  border-bottom: var(--color-primary) solid .25em;
+}
+
+.App-logo {
+  height: 12em;
+}
+
+.App-body {
+  padding: 2.5em;
+}
+
+.App-body label,
+.App-body input {
+  margin-right: 0.75em;
+}
+
+.App-footer {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 8px;
+  border-top: var(--color-primary) solid .25em;
+  font-style: italic;
+}
