@@ -9,10 +9,10 @@
   border: 0.1em dashed var(--color-primary);
 }
 
-[data-priority="default"] {
+[data-notification-type="default"] {
   color: var(--priority-default);
 }
 
-[data-priority="urgent"] {
+[data-notification-type="urgent"] {
   color: var(--priority-urgent);
 }
