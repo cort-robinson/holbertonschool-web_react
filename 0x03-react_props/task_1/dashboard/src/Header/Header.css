@@ -1,0 +1,10 @@
+.App-header {
+  display: flex;
+  align-items: center;
+  color: var(--color-primary);
+  border-bottom: var(--color-primary) solid .25em;
+}
+
+.App-logo {
+  height: 12em;
+}
