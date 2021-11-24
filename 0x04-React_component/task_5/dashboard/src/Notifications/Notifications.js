@@ -21,7 +21,13 @@ class Notifications extends React.Component {
   };
 
   markAsRead(id) {
-    console.log(`Notification ${id} has been marked as read`)
+    console.log(`Notification ${id} has been marked as read`);
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextProps.listNotifications.length > this.props.listNotifications.length)
+      return true;
+    return false;
   }
 
   render() {
@@ -54,7 +60,7 @@ class Notifications extends React.Component {
                       type={notification.type}
                       value={notification.value}
                       html={notification.html}
-                      markAsRead={() => {this.markAsRead(notification.id)}} />
+                      markAsRead={() => { this.markAsRead(notification.id); }} />
                   ))}
                 </ul>
               </>
