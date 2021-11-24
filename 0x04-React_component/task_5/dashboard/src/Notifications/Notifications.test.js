@@ -80,4 +80,20 @@ describe('<Notifications />', () => {
     instance.markAsRead(1);
     expect(spy).toHaveBeenCalledWith('Notification 1 has been marked as read');
   });
+
+  it('does not rerender when updating props with same list', () => {
+    const spy = jest.spyOn(Notifications.prototype, 'shouldComponentUpdate');
+    const wrapper = shallow(<Notifications displayDrawer={true} listNotifications={listNotifications} />);
+    wrapper.setProps({ listNotifications });
+    expect(spy).toHaveReturnedWith(false);
+    spy.mockRestore();
+  });
+
+  it('rerenders when updating props with longer list', () => {
+    const spy = jest.spyOn(Notifications.prototype, 'shouldComponentUpdate');
+    const wrapper = shallow(<Notifications displayDrawer={true} listNotifications={listNotifications} />);
+    wrapper.setProps({ listNotifications: [...listNotifications, { id: 4, type: 'default', value: 'New course available' }] });
+    expect(spy).toHaveReturnedWith(true);
+    spy.mockRestore();
+  })
 });
