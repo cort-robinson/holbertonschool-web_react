@@ -20,6 +20,7 @@ class App extends React.Component {
   static defaultProps = {
     isLoggedIn: false,
   };
+
   render() {
     const listCourses = [
       { id: 1, name: 'ES6', credit: 60 },
@@ -39,12 +40,12 @@ class App extends React.Component {
     return (
       <>
         <Notifications listNotifications={listNotifications} />
-        <div class="App">
+        <div className="App">
           <Header />
-          <div class="App-body">
-            {isLoggedIn ? <CourseList listCourses={listCourses} /> : <Login />}
+          <div className="App-body">
+            {this.props.isLoggedIn ? <CourseList listCourses={listCourses} /> : <Login />}
           </div>
-          <div class="App-footer">
+          <div className="App-footer">
             <Footer />
           </div>
         </div>
