@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Notifications.css';
 import NotificationItem from './NotificationItem';
 import NotificationItemShape from './NotificationItemShape';
 import icon from '../assets/close-icon.png';
@@ -13,8 +12,12 @@ const styles = StyleSheet.create({
     width: '20em',
     padding: '0 0.5em',
     border: '0.1em dashed #E0354B',
-  }
-})
+  },
+  menuItem: {
+    textAlign: 'right',
+    marginBottom: '0.5em',
+  },
+});
 
 class Notifications extends React.Component {
   constructor(props) {
@@ -44,7 +47,7 @@ class Notifications extends React.Component {
   render() {
     return (
       <>
-        <div className="menuItem">Your notifications</div>
+        <div className={`menuItem ${css(styles.menuItem)}`}>Your notifications</div>
         {this.props.displayDrawer && (
           <div className={`Notifications ${css(styles.notifications)}`}>
             {this.props.listNotifications.length > 0 ? (
