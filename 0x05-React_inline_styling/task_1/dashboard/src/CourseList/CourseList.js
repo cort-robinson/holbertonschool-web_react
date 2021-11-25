@@ -1,7 +1,6 @@
 import { css, StyleSheet } from 'aphrodite';
 import PropTypes from 'prop-types';
 import React from 'react';
-import './CourseList.css';
 import CourseListRow from './CourseListRow';
 import CourseShape from './CourseShape';
 
