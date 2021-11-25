@@ -95,7 +95,7 @@ class Notifications extends React.Component {
   render() {
     return (
       <>
-        <div className={this.props.displayDrawer === false ? css(styles.menuItem) : css(styles.menuItem, styles.menuItemOpen)}>Your notifications</div>
+        <div className={this.props.displayDrawer === false ? `menuItem ${css(styles.menuItem)}` : `menuItem ${css(styles.menuItem, styles.menuItemOpen)}`}>Your notifications</div>
         {this.props.displayDrawer && (
           <div className={`Notifications ${css(styles.notifications)}`}>
             {this.props.listNotifications.length > 0 ? (
