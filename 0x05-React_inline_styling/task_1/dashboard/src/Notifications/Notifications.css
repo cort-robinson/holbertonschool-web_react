@@ -1,0 +1,18 @@
+:root {
+  --color-primary: #E0354B;
+  --priority-default: blue;
+  --priority-urgent: red;
+}
+
+.menuItem {
+  text-align: right;
+  margin-bottom: .5em;
+}
+
+[data-notification-type="default"] {
+  color: var(--priority-default);
+}
+
+[data-notification-type="urgent"] {
+  color: var(--priority-urgent);
+}
