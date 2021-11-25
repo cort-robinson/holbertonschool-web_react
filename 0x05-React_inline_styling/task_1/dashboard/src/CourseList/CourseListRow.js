@@ -9,6 +9,10 @@ const headerRowStyle = {
   backgroundColor: '#deb5b545',
 };
 
+const headerLeftAlignStyle = {
+  textAlign: 'left',
+};
+
 function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
   return (
     <tr style={isHeader ? headerRowStyle : rowStyle}>
@@ -17,8 +21,8 @@ function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
       )}
       {isHeader && textSecondCell !== null && (
         <>
-          <th>{textFirstCell}</th>
-          <th>{textSecondCell}</th>
+          <th style={headerLeftAlignStyle}>{textFirstCell}</th>
+          <th style={headerLeftAlignStyle}>{textSecondCell}</th>
         </>
       )}
       {!isHeader && (
