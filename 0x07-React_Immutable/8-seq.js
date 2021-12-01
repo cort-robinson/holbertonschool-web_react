@@ -7,7 +7,7 @@ function printBestStudents(object) {
       score: student.score,
       firstName: student.firstName.charAt(0).toUpperCase() + student.firstName.slice(1),
       lastName: student.lastName.charAt(0).toUpperCase() + student.lastName.slice(1),
-    }))
+    }));
   console.log(bestStudents.toObject());
 }
 
