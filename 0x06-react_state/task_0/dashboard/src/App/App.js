@@ -96,10 +96,13 @@ class App extends React.Component {
       { id: 2, type: 'urgent', value: 'New resume available' },
       { id: 3, type: 'urgent', html: htmlObject },
     ];
+
+    const { displayDrawer } = this.state;
+
     return (
       <>
         <div className={css(styles.body)}>
-          <Notifications listNotifications={listNotifications} displayDrawer={this.state.displayDrawer} handleDisplayDrawer={this.handleDisplayDrawer} handleHideDrawer={this.handleHideDrawer} />
+          <Notifications listNotifications={listNotifications} displayDrawer={displayDrawer} handleDisplayDrawer={this.handleDisplayDrawer} handleHideDrawer={this.handleHideDrawer} />
           <div className="App">
             <Header />
             <div className={css(styles.appBody)}>
