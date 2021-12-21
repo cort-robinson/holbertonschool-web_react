@@ -1,16 +1,11 @@
-import {
-  FETCH_NOTIFICATIONS_SUCCESS,
-  MARK_AS_READ,
-  SET_TYPE_FILTER
-} from '../actions/notificationActionTypes';
+import { Map } from 'immutable';
 import {
   fetchNotificationsSuccess,
   markAsRead,
   setNotificationFilter
 } from '../actions/notificationActionCreators';
-import notificationReducer from './notificationReducer';
 import { notificationsNormalizer } from '../schema/notifications';
-import { Map, fromJS } from 'immutable';
+import notificationReducer from './notificationReducer';
 
 const notifications = [
   {
