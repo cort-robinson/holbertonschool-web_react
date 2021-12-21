@@ -4,7 +4,7 @@ import {
   FETCH_NOTIFICATIONS_SUCCESS
 } from '../actions/notificationActionTypes';
 
-export default function noftificationReducer(state = { filter: 'DEFAULT', notifications: [] }, action) {
+export default function notificationReducer(state = { filter: 'DEFAULT', notifications: [] }, action) {
   switch (action.type) {
     case FETCH_NOTIFICATIONS_SUCCESS:
       return {
